@@ -5,7 +5,7 @@ from flask import Flask, jsonify, render_template, request, g
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("NOTIFICATION_DB_PATH", os.path.join(BASE_DIR, "instance", "notifications.db"))
-APP_VERSION = os.environ.get("APP_VERSION", "v3").lower()
+APP_VERSION = os.environ.get("APP_VERSION", "v1").lower()
 if APP_VERSION not in {"v1", "v2", "v3"}:
     APP_VERSION = "v3"
 
